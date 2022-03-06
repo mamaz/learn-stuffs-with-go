@@ -13,12 +13,13 @@ const RU_MINUTES = "minutes"
 const RU_SECONDS = "seconds"
 
 type Bucket struct {
-	TokenNumber      int
-	refillUnit       string
-	cache            cache.CacheI
-	bucketId         string
-	refillChannel    chan bool
-	decrementChannel chan int
+	TokenNumber          int
+	refillUnit           string
+	cache                cache.CacheI
+	bucketId             string
+	refillChannel        chan bool
+	decrementChannel     chan int
+	isBucketEmptyChannel chan bool
 }
 
 func NewBucket(tokenNumber int, refillUnit string, cache cache.CacheI) *Bucket {
@@ -26,12 +27,13 @@ func NewBucket(tokenNumber int, refillUnit string, cache cache.CacheI) *Bucket {
 	cache.Set(bucketId, tokenNumber)
 
 	return &Bucket{
-		TokenNumber:      tokenNumber,
-		refillUnit:       refillUnit,
-		cache:            cache,
-		bucketId:         bucketId,
-		refillChannel:    make(chan bool),
-		decrementChannel: make(chan int),
+		TokenNumber:          tokenNumber,
+		refillUnit:           refillUnit,
+		cache:                cache,
+		bucketId:             bucketId,
+		refillChannel:        make(chan bool),
+		decrementChannel:     make(chan int),
+		isBucketEmptyChannel: make(chan bool),
 	}
 }
 
@@ -47,6 +49,7 @@ func (b *Bucket) Start() {
 				b.refill()
 			case <-b.decrementChannel:
 				b.decrementToken()
+			case b.isBucketEmptyChannel <- b.isEmpty():
 			}
 		}
 	}()
@@ -61,7 +64,9 @@ func (b *Bucket) Start() {
 				time.Sleep(time.Duration(b.TokenNumber) * time.Second)
 			}
 
-			b.refillChannel <- true
+			if <-b.isBucketEmptyChannel {
+				b.refillChannel <- true
+			}
 		}
 	}()
 }
@@ -82,7 +87,7 @@ func (b *Bucket) isEmpty() bool {
 }
 
 func (b *Bucket) HandleRequest(payload interface{}) (bool, error) {
-	if b.isEmpty() {
+	if <-b.isBucketEmptyChannel {
 		rate := fmt.Sprintf("%v requests / %v", b.TokenNumber, b.refillUnit)
 		return false, fmt.Errorf("request is above %v", rate)
 	}
