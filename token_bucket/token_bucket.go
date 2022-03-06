@@ -20,17 +20,36 @@ type Bucket struct {
 }
 
 func NewBucket(tokenNumber int, refillUnit string, cache cache.CacheI) *Bucket {
+	bucketId := uuid.NewString()
+	cache.Set(bucketId, tokenNumber)
+
 	return &Bucket{
 		TokenNumber: tokenNumber,
 		refillUnit:  refillUnit,
 		cache:       cache,
-		bucketId:    uuid.NewString(),
+		bucketId:    bucketId,
 	}
 }
 
-func (b *Bucket) Start() {
-	channel := make(chan int)
+// Start thread safe token bucket
+// returns refillChannel and decrement channel
+func (b *Bucket) Start() (chan bool, chan int) {
+	refillChan := make(chan bool)
+	decrementChan := make(chan int)
 
+	// start handlers for refill and decrement token in a bucket
+	go func() {
+		for {
+			select {
+			case <-refillChan:
+				b.refill()
+			case <-decrementChan:
+				b.decrementToken()
+			}
+		}
+	}()
+
+	// start goroutine for refilling token
 	go func() {
 		for {
 			switch b.refillUnit {
@@ -39,23 +58,16 @@ func (b *Bucket) Start() {
 			case RU_SECONDS:
 				time.Sleep(time.Duration(b.TokenNumber) * time.Second)
 			}
-			fmt.Println("executing..")
-			channel <- 1
+
+			refillChan <- true
 		}
 	}()
 
-	for c := range channel {
-		fmt.Println("check if we need refilling")
-
-		if b.isEmpty() {
-			fmt.Println("empty.. refilling")
-			b.refill(c)
-		}
-	}
+	return refillChan, decrementChan
 }
 
-func (b *Bucket) refill(flag int) {
-	b.cache.Set(b.bucketId, b.refillUnit)
+func (b *Bucket) refill() {
+	b.cache.Set(b.bucketId, b.TokenNumber)
 }
 
 func (b *Bucket) decrementToken() {
@@ -65,16 +77,17 @@ func (b *Bucket) decrementToken() {
 }
 
 func (b *Bucket) isEmpty() bool {
-	return b.cache.Get(b.bucketId) == nil
+	value := b.cache.Get(b.bucketId)
+	return value == nil || value.(int) == 0
 }
 
-func (b *Bucket) HandleRequest(payload interface{}) (bool, error) {
+func (b *Bucket) HandleRequest(payload interface{}, decrementChan chan int) (bool, error) {
 	if b.isEmpty() {
 		rate := fmt.Sprintf("%v requests / %v", b.TokenNumber, b.refillUnit)
-		return true, fmt.Errorf("request is above %v", rate)
+		return false, fmt.Errorf("request is above %v", rate)
 	}
 
-	b.decrementToken()
+	decrementChan <- 1
 
-	return false, nil
+	return true, nil
 }
