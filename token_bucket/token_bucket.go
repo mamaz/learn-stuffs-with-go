@@ -13,10 +13,12 @@ const RU_MINUTES = "minutes"
 const RU_SECONDS = "seconds"
 
 type Bucket struct {
-	TokenNumber int
-	refillUnit  string
-	cache       cache.CacheI
-	bucketId    string
+	TokenNumber      int
+	refillUnit       string
+	cache            cache.CacheI
+	bucketId         string
+	refillChannel    chan bool
+	decrementChannel chan int
 }
 
 func NewBucket(tokenNumber int, refillUnit string, cache cache.CacheI) *Bucket {
@@ -24,26 +26,26 @@ func NewBucket(tokenNumber int, refillUnit string, cache cache.CacheI) *Bucket {
 	cache.Set(bucketId, tokenNumber)
 
 	return &Bucket{
-		TokenNumber: tokenNumber,
-		refillUnit:  refillUnit,
-		cache:       cache,
-		bucketId:    bucketId,
+		TokenNumber:      tokenNumber,
+		refillUnit:       refillUnit,
+		cache:            cache,
+		bucketId:         bucketId,
+		refillChannel:    make(chan bool),
+		decrementChannel: make(chan int),
 	}
 }
 
 // Start thread safe token bucket
 // returns refillChannel and decrement channel
-func (b *Bucket) Start() (chan bool, chan int) {
-	refillChan := make(chan bool)
-	decrementChan := make(chan int)
+func (b *Bucket) Start() {
 
 	// start handlers for refill and decrement token in a bucket
 	go func() {
 		for {
 			select {
-			case <-refillChan:
+			case <-b.refillChannel:
 				b.refill()
-			case <-decrementChan:
+			case <-b.decrementChannel:
 				b.decrementToken()
 			}
 		}
@@ -59,11 +61,9 @@ func (b *Bucket) Start() (chan bool, chan int) {
 				time.Sleep(time.Duration(b.TokenNumber) * time.Second)
 			}
 
-			refillChan <- true
+			b.refillChannel <- true
 		}
 	}()
-
-	return refillChan, decrementChan
 }
 
 func (b *Bucket) refill() {
@@ -81,13 +81,13 @@ func (b *Bucket) isEmpty() bool {
 	return value == nil || value.(int) == 0
 }
 
-func (b *Bucket) HandleRequest(payload interface{}, decrementChan chan int) (bool, error) {
+func (b *Bucket) HandleRequest(payload interface{}) (bool, error) {
 	if b.isEmpty() {
 		rate := fmt.Sprintf("%v requests / %v", b.TokenNumber, b.refillUnit)
 		return false, fmt.Errorf("request is above %v", rate)
 	}
 
-	decrementChan <- 1
+	b.decrementChannel <- 1
 
 	return true, nil
 }
