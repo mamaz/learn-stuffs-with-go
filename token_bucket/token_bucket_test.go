@@ -3,10 +3,12 @@ package tokenbucket
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github.com/mamaz/token_bucket/cache"
 )
 
 func TestShouldBeAbleTo(t *testing.T) {
+	inMemory := cache.New()
 
-	assert.Equal(t, true, true)
+	b := NewBucket(2, RU_SECONDS, inMemory)
+	b.Start()
 }
