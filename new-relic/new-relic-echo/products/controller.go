@@ -18,6 +18,7 @@ func NewController(usecase *ProductUC) *Controller {
 }
 
 func (c Controller) CreateProduct(context echo.Context) error {
+
 	newproduct := new(CreateProductRequest)
 
 	if err := context.Bind(newproduct); err != nil {
@@ -27,7 +28,7 @@ func (c Controller) CreateProduct(context echo.Context) error {
 		})
 	}
 
-	created := c.usecase.Create(context, *newproduct)
+	created := c.usecase.Create(*newproduct, context)
 
 	return context.JSON(http.StatusCreated, created)
 }
@@ -43,7 +44,7 @@ func (c Controller) GetAllProducts(context echo.Context) error {
 func (c Controller) GetProductById(context echo.Context) error {
 	id := context.Param("id")
 
-	product, found := c.usecase.GetProductById(context, id)
+	product, found := c.usecase.GetProductById(id, context)
 
 	if found {
 		return context.JSON(http.StatusOK, map[string]interface{}{
