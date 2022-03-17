@@ -56,3 +56,11 @@ func (c Controller) GetProductById(context echo.Context) error {
 		"data": nil,
 	})
 }
+
+func (c Controller) GetCombinedProducts(context echo.Context) error {
+	products, err := c.usecase.GetCombinedProducts(context)
+	if err != nil {
+		return fmt.Errorf("error getting combined products %v", err)
+	}
+	return context.JSON(http.StatusOK, products)
+}

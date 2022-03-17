@@ -29,6 +29,7 @@ func StartServer() {
 	ec.GET("/products", controller.GetAllProducts)
 	ec.POST("/products", controller.CreateProduct)
 	ec.GET("/products/:id", controller.GetProductById)
+	ec.GET("/combined-products", controller.GetCombinedProducts)
 
 	if err := ec.Start(":9090"); err != http.ErrServerClosed {
 		log.Fatal(err)
