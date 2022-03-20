@@ -30,6 +30,9 @@ func StartServer() {
 	ec.POST("/products", controller.CreateProduct)
 	ec.GET("/products/:id", controller.GetProductById)
 	ec.GET("/combined-products", controller.GetCombinedProducts)
+	ec.POST("/error", controller.MakeError)
+	ec.POST("/fatal", controller.MakeFatalError)
+	ec.POST("/nullptr", controller.MakeNullPtr)
 
 	if err := ec.Start(":9090"); err != http.ErrServerClosed {
 		log.Fatal(err)
@@ -51,6 +54,7 @@ func SetupNewRelic() *newrelic.Application {
 		newrelic.ConfigAppName(appName),
 		newrelic.ConfigLicense(licenseKey),
 		newrelic.ConfigDistributedTracerEnabled(true),
+		newrelic.ConfigDebugLogger(os.Stdout),
 	)
 	if err != nil {
 		log.Fatalf("error establishing new relic %v", err.Error())

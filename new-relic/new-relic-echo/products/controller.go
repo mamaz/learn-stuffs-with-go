@@ -64,3 +64,15 @@ func (c Controller) GetCombinedProducts(context echo.Context) error {
 	}
 	return context.JSON(http.StatusOK, products)
 }
+
+func (c Controller) MakeError(context echo.Context) error {
+	return context.JSON(http.StatusBadRequest, c.usecase.MakeError())
+}
+
+func (c Controller) MakeFatalError(context echo.Context) error {
+	return context.JSON(http.StatusBadRequest, c.usecase.MakeFatalError())
+}
+
+func (c Controller) MakeNullPtr(context echo.Context) error {
+	return context.JSON(http.StatusBadRequest, c.usecase.MakeNullPtr())
+}
