@@ -2,9 +2,11 @@ package products
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 
 	"github.com/labstack/echo/v4"
+	"github.com/newrelic/go-agent/v3/integrations/nrecho-v4"
 )
 
 type Controller struct {
@@ -66,7 +68,19 @@ func (c Controller) GetCombinedProducts(context echo.Context) error {
 }
 
 func (c Controller) MakeError(context echo.Context) error {
-	return context.JSON(http.StatusBadRequest, c.usecase.MakeError())
+	// notes: error should be logged in controller only
+	err := c.usecase.MakeError()
+	if err != nil {
+		txn := nrecho.FromContext(context)
+		txn.NoticeError(err)
+
+		log.Println(err.Error())
+	}
+
+	return context.JSON(http.StatusBadRequest, map[string]string{
+		"error":   "400",
+		"message": err.Error(),
+	})
 }
 
 func (c Controller) MakeFatalError(context echo.Context) error {

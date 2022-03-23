@@ -14,17 +14,19 @@ func GetThirdParty(context echo.Context) ([]Product, error) {
 
 	client := &http.Client{}
 	client.Transport = newrelic.NewRoundTripper(client.Transport)
+	thirdPartyURL := "https://run.mocky.io/v3/75673fef-5f0f-4c6f-b223-7289f8fe18e3"
 
-	request, err := http.NewRequest("GET", "https://run.mocky.io/v3/75673fef-5f0f-4c6f-b223-7289f8fe18e3", nil)
+	request, err := http.NewRequest("GET", thirdPartyURL, nil)
 	if err != nil {
 		return nil, err
 	}
-	request = newrelic.RequestWithTransactionContext(request, txn)
 
+	request = newrelic.RequestWithTransactionContext(request, txn)
 	response, err := client.Do(request)
 	if err != nil {
 		return nil, err
 	}
+
 	defer response.Body.Close()
 
 	products := []Product{}
