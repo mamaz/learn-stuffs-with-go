@@ -26,7 +26,7 @@ func (puc ProductUC) GetProductById(productID string, context echo.Context) (Pro
 	return puc.repo.FindById(productID, context)
 }
 
-func (puc ProductUC) Create(newProduct CreateProductRequest, context echo.Context) Product {
+func (puc ProductUC) Create(newProduct CreateProductRequest, context echo.Context) (Product, error) {
 	return puc.repo.Create(newProduct, context)
 }
 

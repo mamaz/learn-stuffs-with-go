@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
+	"new-relic-echo/infrastructure"
 	"new-relic-echo/products"
 	"os"
 
@@ -22,7 +23,9 @@ func StartServer() {
 	ec.Use(nrecho.Middleware(app))
 
 	// products
-	repo := products.NewRepo()
+	gormdb := infrastructure.NewGormDB()
+
+	repo := products.NewRepo(gormdb)
 	usecase := products.NewProductUC(repo)
 	controller := products.NewController(usecase)
 
@@ -54,7 +57,7 @@ func SetupNewRelic() *newrelic.Application {
 		newrelic.ConfigAppName(appName),
 		newrelic.ConfigLicense(licenseKey),
 		newrelic.ConfigDistributedTracerEnabled(true),
-		newrelic.ConfigDebugLogger(os.Stdout), // debug mode, log is printed to stdout
+		// newrelic.ConfigDebugLogger(os.Stdout), // debug mode, log is printed to stdout
 		func(cfg *newrelic.Config) {
 			cfg.ErrorCollector.RecordPanics = true
 		},

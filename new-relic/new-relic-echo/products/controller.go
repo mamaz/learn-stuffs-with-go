@@ -20,7 +20,6 @@ func NewController(usecase *ProductUC) *Controller {
 }
 
 func (c Controller) CreateProduct(context echo.Context) error {
-
 	newproduct := new(CreateProductRequest)
 
 	if err := context.Bind(newproduct); err != nil {
@@ -30,7 +29,12 @@ func (c Controller) CreateProduct(context echo.Context) error {
 		})
 	}
 
-	created := c.usecase.Create(*newproduct, context)
+	created, err := c.usecase.Create(*newproduct, context)
+	if err != nil {
+		return context.JSON(http.StatusInternalServerError, map[string]interface{}{
+			"error": "Internal Server Error",
+		})
+	}
 
 	return context.JSON(http.StatusCreated, created)
 }
