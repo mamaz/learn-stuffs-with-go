@@ -15,7 +15,7 @@ func NewProductUC(repo *ProductRepo) *ProductUC {
 	}
 }
 
-func (puc ProductUC) GetAllProducts(context echo.Context) []Product {
+func (puc ProductUC) GetAllProducts(context echo.Context) ([]Product, error) {
 	txn := nrecho.FromContext(context)
 	defer txn.StartSegment("GetAllProducts").End()
 
@@ -31,7 +31,11 @@ func (puc ProductUC) Create(newProduct CreateProductRequest, context echo.Contex
 }
 
 func (puc ProductUC) GetCombinedProducts(context echo.Context) ([]Product, error) {
-	dbProducts := puc.GetAllProducts(context)         // fetch from DB
+	dbProducts, err := puc.GetAllProducts(context) // fetch from DB
+	if err != nil {
+		return nil, err
+	}
+
 	thirdPartyProducts, err := GetThirdParty(context) // fetch from 3rd party
 	if err != nil {
 		return nil, err

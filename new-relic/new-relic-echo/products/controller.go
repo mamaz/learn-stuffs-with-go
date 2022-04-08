@@ -40,7 +40,13 @@ func (c Controller) CreateProduct(context echo.Context) error {
 }
 
 func (c Controller) GetAllProducts(context echo.Context) error {
-	products := c.usecase.GetAllProducts(context)
+	products, err := c.usecase.GetAllProducts(context)
+	if err != nil {
+		return context.JSON(http.StatusInternalServerError, map[string]interface{}{
+			"error":   500,
+			"message": "Internal server error",
+		})
+	}
 
 	return context.JSON(http.StatusOK, map[string]interface{}{
 		"data": products,
@@ -81,8 +87,8 @@ func (c Controller) MakeError(context echo.Context) error {
 		log.Println(err.Error())
 	}
 
-	return context.JSON(http.StatusBadRequest, map[string]string{
-		"error":   "400",
+	return context.JSON(http.StatusBadRequest, map[string]interface{}{
+		"error":   400,
 		"message": err.Error(),
 	})
 }

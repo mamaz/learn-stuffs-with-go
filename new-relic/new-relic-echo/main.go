@@ -60,6 +60,7 @@ func SetupNewRelic() *newrelic.Application {
 		// newrelic.ConfigDebugLogger(os.Stdout), // debug mode, log is printed to stdout
 		func(cfg *newrelic.Config) {
 			cfg.ErrorCollector.RecordPanics = true
+			cfg.DatastoreTracer.SlowQuery.Threshold = 800 // in ms
 		},
 	)
 	if err != nil {
