@@ -40,6 +40,10 @@ ec.POST("/fatal", controller.MakeFatalError)
 ec.POST("/nullptr", controller.MakeNullPtr)
 ```
 
+## More Resources
+
+Other segment tracing, such as functions and messaging, can be seen in more details in New Relic [docs](https://docs.newrelic.com/docs/apm/agents/go-agent/instrumentation/instrument-go-segments)
+
 License
 
 MIT
