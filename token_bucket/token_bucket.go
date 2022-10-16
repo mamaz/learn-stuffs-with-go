@@ -87,11 +87,13 @@ func (b *Bucket) isEmpty() bool {
 }
 
 func (b *Bucket) HandleRequest(payload interface{}) (bool, error) {
+	// if bucket is empty, then request is rejected
 	if <-b.isBucketEmptyChannel {
 		rate := fmt.Sprintf("%v requests / %v", b.TokenNumber, b.refillUnit)
 		return false, fmt.Errorf("request is above %v", rate)
 	}
 
+	// each incoming request will use 1 token
 	b.decrementChannel <- 1
 
 	return true, nil
