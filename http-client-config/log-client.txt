@@ -1,0 +1,261 @@
+2023/12/08 14:31:42 DEFAULT TRANSPORT: &{idleMu:{state:0 sema:0} closeIdle:false idleConn:map[] idleConnWait:map[] idleLRU:{ll:<nil> m:map[]} reqMu:{state:0 sema:0} reqCanceler:map[] altMu:{state:0 sema:0} altProto:{v:<nil>} connsPerHostMu:{state:0 sema:0} connsPerHost:map[] connsPerHostWait:map[] Proxy:0x1005033c0 DialContext:0x10051a850 Dial:<nil> DialTLSContext:<nil> DialTLS:<nil> TLSClientConfig:0x1400017e180 TLSHandshakeTimeout:10s DisableKeepAlives:false DisableCompression:false MaxIdleConns:100 MaxIdleConnsPerHost:100 MaxConnsPerHost:100 IdleConnTimeout:1m40s ResponseHeaderTimeout:0s ExpectContinueTimeout:1s TLSNextProto:map[] ProxyConnectHeader:map[] GetProxyConnectHeader:<nil> MaxResponseHeaderBytes:0 WriteBufferSize:0 ReadBufferSize:0 nextProtoOnce:{done:0 m:{state:0 sema:0}} h2transport:<nil> tlsNextProtoWasNil:false ForceAttemptHTTP2:true}
+2023/12/08 14:31:42 listening to port 9000
+2023/12/08 14:33:35 DEFAULT TRANSPORT: &{idleMu:{state:0 sema:0} closeIdle:false idleConn:map[] idleConnWait:map[] idleLRU:{ll:<nil> m:map[]} reqMu:{state:0 sema:0} reqCanceler:map[] altMu:{state:0 sema:0} altProto:{v:<nil>} connsPerHostMu:{state:0 sema:0} connsPerHost:map[] connsPerHostWait:map[] Proxy:0x1022373c0 DialContext:0x10224e850 Dial:<nil> DialTLSContext:<nil> DialTLS:<nil> TLSClientConfig:0x1400017e180 TLSHandshakeTimeout:10s DisableKeepAlives:false DisableCompression:false MaxIdleConns:1 MaxIdleConnsPerHost:1 MaxConnsPerHost:1 IdleConnTimeout:1m40s ResponseHeaderTimeout:0s ExpectContinueTimeout:1s TLSNextProto:map[] ProxyConnectHeader:map[] GetProxyConnectHeader:<nil> MaxResponseHeaderBytes:0 WriteBufferSize:0 ReadBufferSize:0 nextProtoOnce:{done:0 m:{state:0 sema:0}} h2transport:<nil> tlsNextProtoWasNil:false ForceAttemptHTTP2:true}
+2023/12/08 14:33:35 listening to port 9000
+2023/12/08 14:36:13 DEFAULT TRANSPORT: <nil>
+2023/12/08 14:36:13 listening to port 9000
+2023/12/08 14:38:02 DEFAULT TRANSPORT: &{idleMu:{state:0 sema:0} closeIdle:false idleConn:map[] idleConnWait:map[] idleLRU:{ll:<nil> m:map[]} reqMu:{state:0 sema:0} reqCanceler:map[] altMu:{state:0 sema:0} altProto:{v:<nil>} connsPerHostMu:{state:0 sema:0} connsPerHost:map[] connsPerHostWait:map[] Proxy:0x1003433c0 DialContext:0x10035a850 Dial:<nil> DialTLSContext:<nil> DialTLS:<nil> TLSClientConfig:0x140001c8180 TLSHandshakeTimeout:10s DisableKeepAlives:false DisableCompression:false MaxIdleConns:1 MaxIdleConnsPerHost:1 MaxConnsPerHost:1 IdleConnTimeout:1m40s ResponseHeaderTimeout:0s ExpectContinueTimeout:1s TLSNextProto:map[] ProxyConnectHeader:map[] GetProxyConnectHeader:<nil> MaxResponseHeaderBytes:0 WriteBufferSize:0 ReadBufferSize:0 nextProtoOnce:{done:0 m:{state:0 sema:0}} h2transport:<nil> tlsNextProtoWasNil:false ForceAttemptHTTP2:true}
+2023/12/08 14:38:02 listening to port 9000
+2023/12/08 14:40:41 DEFAULT TRANSPORT: &{idleMu:{state:0 sema:0} closeIdle:false idleConn:map[] idleConnWait:map[] idleLRU:{ll:<nil> m:map[]} reqMu:{state:0 sema:0} reqCanceler:map[] altMu:{state:0 sema:0} altProto:{v:<nil>} connsPerHostMu:{state:0 sema:0} connsPerHost:map[] connsPerHostWait:map[] Proxy:0x104b7b3c0 DialContext:0x104b92850 Dial:<nil> DialTLSContext:<nil> DialTLS:<nil> TLSClientConfig:0x1400017e180 TLSHandshakeTimeout:10s DisableKeepAlives:false DisableCompression:false MaxIdleConns:100 MaxIdleConnsPerHost:100 MaxConnsPerHost:100 IdleConnTimeout:1m40s ResponseHeaderTimeout:0s ExpectContinueTimeout:1s TLSNextProto:map[] ProxyConnectHeader:map[] GetProxyConnectHeader:<nil> MaxResponseHeaderBytes:0 WriteBufferSize:0 ReadBufferSize:0 nextProtoOnce:{done:0 m:{state:0 sema:0}} h2transport:<nil> tlsNextProtoWasNil:false ForceAttemptHTTP2:true}
+2023/12/08 14:40:41 listening to port 9000
+2023/12/08 14:43:02 DEFAULT TRANSPORT: &{idleMu:{state:0 sema:0} closeIdle:false idleConn:map[] idleConnWait:map[] idleLRU:{ll:<nil> m:map[]} reqMu:{state:0 sema:0} reqCanceler:map[] altMu:{state:0 sema:0} altProto:{v:<nil>} connsPerHostMu:{state:0 sema:0} connsPerHost:map[] connsPerHostWait:map[] Proxy:0x1005a73c0 DialContext:0x1005be850 Dial:<nil> DialTLSContext:<nil> DialTLS:<nil> TLSClientConfig:0x1400017e180 TLSHandshakeTimeout:10s DisableKeepAlives:false DisableCompression:false MaxIdleConns:100 MaxIdleConnsPerHost:100 MaxConnsPerHost:100 IdleConnTimeout:1m40s ResponseHeaderTimeout:0s ExpectContinueTimeout:1s TLSNextProto:map[] ProxyConnectHeader:map[] GetProxyConnectHeader:<nil> MaxResponseHeaderBytes:0 WriteBufferSize:0 ReadBufferSize:0 nextProtoOnce:{done:0 m:{state:0 sema:0}} h2transport:<nil> tlsNextProtoWasNil:false ForceAttemptHTTP2:true}
+2023/12/08 14:43:02 listening to port 9000
+2023/12/08 14:44:49 DEFAULT TRANSPORT: &{idleMu:{state:0 sema:0} closeIdle:false idleConn:map[] idleConnWait:map[] idleLRU:{ll:<nil> m:map[]} reqMu:{state:0 sema:0} reqCanceler:map[] altMu:{state:0 sema:0} altProto:{v:<nil>} connsPerHostMu:{state:0 sema:0} connsPerHost:map[] connsPerHostWait:map[] Proxy:0x102e373c0 DialContext:0x102e4e850 Dial:<nil> DialTLSContext:<nil> DialTLS:<nil> TLSClientConfig:0x1400017e180 TLSHandshakeTimeout:10s DisableKeepAlives:false DisableCompression:false MaxIdleConns:1000 MaxIdleConnsPerHost:1000 MaxConnsPerHost:1000 IdleConnTimeout:1m40s ResponseHeaderTimeout:0s ExpectContinueTimeout:1s TLSNextProto:map[] ProxyConnectHeader:map[] GetProxyConnectHeader:<nil> MaxResponseHeaderBytes:0 WriteBufferSize:0 ReadBufferSize:0 nextProtoOnce:{done:0 m:{state:0 sema:0}} h2transport:<nil> tlsNextProtoWasNil:false ForceAttemptHTTP2:true}
+2023/12/08 14:44:49 listening to port 9000
+2023/12/08 14:44:59 eror on receiving value: Get "http://localhost:8000/hello": read tcp [::1]:57326->[::1]:8000: read: connection reset by peer
+2023/12/08 14:44:59 http: panic serving [::1]:57075: runtime error: invalid memory address or nil pointer dereference
+goroutine 6 [running]:
+net/http.(*conn).serve.func1()
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1850 +0xb0
+panic({0x102f59800, 0x10315fa60})
+	/Users/mamaz/.gvm/gos/go1.19/src/runtime/panic.go:890 +0x258
+main.main.func1({0x10aa5bdf8, 0x14000028dc0}, 0x0?)
+	/Users/mamaz/Documents/coding-kata/Go/http-client-config/client/main.go:60 +0x120
+net/http.HandlerFunc.ServeHTTP(0x102f57a80?, {0x10aa5bdf8?, 0x14000028dc0?}, 0x1400001e334?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).routeHTTP(0x14000110300, {0x10aa5bdf8, 0x14000028dc0}, 0x14000160800)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:436 +0x218
+net/http.HandlerFunc.ServeHTTP(0x14000160700?, {0x10aa5bdf8?, 0x14000028dc0?}, 0xd0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi/middleware.RequestLogger.func1.1({0x102fabcf8, 0x1400017c0e0}, 0x14000160700)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/middleware/logger.go:57 +0x2ec
+net/http.HandlerFunc.ServeHTTP(0x102fac178?, {0x102fabcf8?, 0x1400017c0e0?}, 0x10315f8b0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).ServeHTTP(0x14000110300, {0x102fabcf8, 0x1400017c0e0}, 0x14000160300)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:87 +0x2d8
+net/http.serverHandler.ServeHTTP({0x1400007da40?}, {0x102fabcf8, 0x1400017c0e0}, 0x14000160300)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2947 +0x2c4
+net/http.(*conn).serve(0x14000117e00, {0x102fac220, 0x1400007d800})
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1991 +0x560
+created by net/http.(*Server).Serve
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:3102 +0x444
+2023/12/08 14:44:59 eror on receiving value: Get "http://localhost:8000/hello": read tcp [::1]:57325->[::1]:8000: read: connection reset by peer
+2023/12/08 14:44:59 http: panic serving [::1]:57078: runtime error: invalid memory address or nil pointer dereference
+goroutine 8 [running]:
+net/http.(*conn).serve.func1()
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1850 +0xb0
+panic({0x102f59800, 0x10315fa60})
+	/Users/mamaz/.gvm/gos/go1.19/src/runtime/panic.go:890 +0x258
+main.main.func1({0x10aa5bdf8, 0x1400030c0c0}, 0x0?)
+	/Users/mamaz/Documents/coding-kata/Go/http-client-config/client/main.go:60 +0x120
+net/http.HandlerFunc.ServeHTTP(0x102f57a80?, {0x10aa5bdf8?, 0x1400030c0c0?}, 0x14000300004?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).routeHTTP(0x14000110300, {0x10aa5bdf8, 0x1400030c0c0}, 0x14000326100)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:436 +0x218
+net/http.HandlerFunc.ServeHTTP(0x14000326000?, {0x10aa5bdf8?, 0x1400030c0c0?}, 0x400000?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi/middleware.RequestLogger.func1.1({0x102fabcf8, 0x14000314000}, 0x14000326000)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/middleware/logger.go:57 +0x2ec
+net/http.HandlerFunc.ServeHTTP(0x102fac178?, {0x102fabcf8?, 0x14000314000?}, 0x10315f8b0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).ServeHTTP(0x14000110300, {0x102fabcf8, 0x14000314000}, 0x14000160500)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:87 +0x2d8
+net/http.serverHandler.ServeHTTP({0x1400007dc20?}, {0x102fabcf8, 0x14000314000}, 0x14000160500)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2947 +0x2c4
+net/http.(*conn).serve(0x14000117f40, {0x102fac220, 0x1400007d800})
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1991 +0x560
+created by net/http.(*Server).Serve
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:3102 +0x444
+2023/12/08 14:44:59 eror on receiving value: Get "http://localhost:8000/hello": read tcp [::1]:57324->[::1]:8000: read: connection reset by peer
+2023/12/08 14:44:59 http: panic serving [::1]:57081: runtime error: invalid memory address or nil pointer dereference
+goroutine 9 [running]:
+net/http.(*conn).serve.func1()
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1850 +0xb0
+panic({0x102f59800, 0x10315fa60})
+	/Users/mamaz/.gvm/gos/go1.19/src/runtime/panic.go:890 +0x258
+main.main.func1({0x10aa5bdf8, 0x14000092100}, 0x0?)
+	/Users/mamaz/Documents/coding-kata/Go/http-client-config/client/main.go:60 +0x120
+net/http.HandlerFunc.ServeHTTP(0x102f57a80?, {0x10aa5bdf8?, 0x14000092100?}, 0x140000b6004?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).routeHTTP(0x14000110300, {0x10aa5bdf8, 0x14000092100}, 0x140000cc100)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:436 +0x218
+net/http.HandlerFunc.ServeHTTP(0x140000cc000?, {0x10aa5bdf8?, 0x14000092100?}, 0x400000?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi/middleware.RequestLogger.func1.1({0x102fabcf8, 0x140000c4000}, 0x140000cc000)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/middleware/logger.go:57 +0x2ec
+net/http.HandlerFunc.ServeHTTP(0x102fac178?, {0x102fabcf8?, 0x140000c4000?}, 0x10315f8b0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).ServeHTTP(0x14000110300, {0x102fabcf8, 0x140000c4000}, 0x14000160600)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:87 +0x2d8
+net/http.serverHandler.ServeHTTP({0x1400007dd10?}, {0x102fabcf8, 0x140000c4000}, 0x14000160600)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2947 +0x2c4
+net/http.(*conn).serve(0x140001a4000, {0x102fac220, 0x1400007d800})
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1991 +0x560
+created by net/http.(*Server).Serve
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:3102 +0x444
+2023/12/08 14:44:59 eror on receiving value: Get "http://localhost:8000/hello": read tcp [::1]:57328->[::1]:8000: read: connection reset by peer
+2023/12/08 14:44:59 http: panic serving [::1]:57080: runtime error: invalid memory address or nil pointer dereference
+goroutine 37 [running]:
+net/http.(*conn).serve.func1()
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1850 +0xb0
+panic({0x102f59800, 0x10315fa60})
+	/Users/mamaz/.gvm/gos/go1.19/src/runtime/panic.go:890 +0x258
+main.main.func1({0x10aa5bdf8, 0x1400028c0c0}, 0x0?)
+	/Users/mamaz/Documents/coding-kata/Go/http-client-config/client/main.go:60 +0x120
+net/http.HandlerFunc.ServeHTTP(0x102f57a80?, {0x10aa5bdf8?, 0x1400028c0c0?}, 0x14000280004?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).routeHTTP(0x14000110300, {0x10aa5bdf8, 0x1400028c0c0}, 0x140002a4200)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:436 +0x218
+net/http.HandlerFunc.ServeHTTP(0x140002a4100?, {0x10aa5bdf8?, 0x1400028c0c0?}, 0xd0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi/middleware.RequestLogger.func1.1({0x102fabcf8, 0x14000294000}, 0x140002a4100)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/middleware/logger.go:57 +0x2ec
+net/http.HandlerFunc.ServeHTTP(0x102fac178?, {0x102fabcf8?, 0x14000294000?}, 0x10315f8b0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).ServeHTTP(0x14000110300, {0x102fabcf8, 0x14000294000}, 0x14000216400)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:87 +0x2d8
+net/http.serverHandler.ServeHTTP({0x1400020a3f0?}, {0x102fabcf8, 0x14000294000}, 0x14000216400)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2947 +0x2c4
+net/http.(*conn).serve(0x1400021c1e0, {0x102fac220, 0x1400007d800})
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1991 +0x560
+created by net/http.(*Server).Serve
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:3102 +0x444
+2023/12/08 14:44:59 eror on receiving value: Get "http://localhost:8000/hello": read tcp [::1]:57321->[::1]:8000: read: connection reset by peer
+2023/12/08 14:44:59 http: panic serving [::1]:57077: runtime error: invalid memory address or nil pointer dereference
+goroutine 35 [running]:
+net/http.(*conn).serve.func1()
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1850 +0xb0
+panic({0x102f59800, 0x10315fa60})
+	/Users/mamaz/.gvm/gos/go1.19/src/runtime/panic.go:890 +0x258
+main.main.func1({0x10aa5bdf8, 0x1400028c280}, 0x0?)
+	/Users/mamaz/Documents/coding-kata/Go/http-client-config/client/main.go:60 +0x120
+net/http.HandlerFunc.ServeHTTP(0x102f57a80?, {0x10aa5bdf8?, 0x1400028c280?}, 0x1400028004c?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).routeHTTP(0x14000110300, {0x10aa5bdf8, 0x1400028c280}, 0x140002a4700)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:436 +0x218
+net/http.HandlerFunc.ServeHTTP(0x140002a4600?, {0x10aa5bdf8?, 0x1400028c280?}, 0xd0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi/middleware.RequestLogger.func1.1({0x102fabcf8, 0x140002940e0}, 0x140002a4600)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/middleware/logger.go:57 +0x2ec
+net/http.HandlerFunc.ServeHTTP(0x102fac178?, {0x102fabcf8?, 0x140002940e0?}, 0x10315f8b0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).ServeHTTP(0x14000110300, {0x102fabcf8, 0x140002940e0}, 0x14000216200)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:87 +0x2d8
+net/http.serverHandler.ServeHTTP({0x1400020a210?}, {0x102fabcf8, 0x140002940e0}, 0x14000216200)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2947 +0x2c4
+net/http.(*conn).serve(0x1400021c0a0, {0x102fac220, 0x1400007d800})
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1991 +0x560
+created by net/http.(*Server).Serve
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:3102 +0x444
+2023/12/08 14:44:59 eror on receiving value: Get "http://localhost:8000/hello": read tcp [::1]:57322->[::1]:8000: read: connection reset by peer
+2023/12/08 14:44:59 http: panic serving [::1]:57074: runtime error: invalid memory address or nil pointer dereference
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1850 +0xb0
+panic({0x102f59800, 0x10315fa60})
+	/Users/mamaz/.gvm/gos/go1.19/src/runtime/panic.go:890 +0x258
+main.main.func1({0x10aa5bdf8, 0x1400020c4c0}, 0x0?)
+	/Users/mamaz/Documents/coding-kata/Go/http-client-config/client/main.go:60 +0x120
+net/http.HandlerFunc.ServeHTTP(0x102f57a80?, {0x10aa5bdf8?, 0x1400020c4c0?}, 0x14000228004?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).routeHTTP(0x14000110300, {0x10aa5bdf8, 0x1400020c4c0}, 0x14000216600)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:436 +0x218
+net/http.HandlerFunc.ServeHTTP(0x14000216500?, {0x10aa5bdf8?, 0x1400020c4c0?}, 0xd0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi/middleware.RequestLogger.func1.1({0x102fabcf8, 0x14000232000}, 0x14000216500)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/middleware/logger.go:57 +0x2ec
+net/http.HandlerFunc.ServeHTTP(0x102fac178?, {0x102fabcf8?, 0x14000232000?}, 0x10315f8b0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).ServeHTTP(0x14000110300, {0x102fabcf8, 0x14000232000}, 0x14000216100)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:87 +0x2d8
+net/http.serverHandler.ServeHTTP({0x1400020a120?}, {0x102fabcf8, 0x14000232000}, 0x14000216100)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2947 +0x2c4
+net/http.(*conn).serve(0x1400021c000, {0x102fac220, 0x1400007d800})
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1991 +0x560
+created by net/http.(*Server).Serve
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:3102 +0x444
+2023/12/08 14:44:59 eror on receiving value: Get "http://localhost:8000/hello": read tcp [::1]:57327->[::1]:8000: read: connection reset by peer
+2023/12/08 14:44:59 http: panic serving [::1]:57079: runtime error: invalid memory address or nil pointer dereference
+goroutine 36 [running]:
+net/http.(*conn).serve.func1()
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1850 +0xb0
+panic({0x102f59800, 0x10315fa60})
+	/Users/mamaz/.gvm/gos/go1.19/src/runtime/panic.go:890 +0x258
+main.main.func1({0x10aa5bdf8, 0x1400020c600}, 0x0?)
+	/Users/mamaz/Documents/coding-kata/Go/http-client-config/client/main.go:60 +0x120
+net/http.HandlerFunc.ServeHTTP(0x102f57a80?, {0x10aa5bdf8?, 0x1400020c600?}, 0x1400022804c?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).routeHTTP(0x14000110300, {0x10aa5bdf8, 0x1400020c600}, 0x14000216b00)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:436 +0x218
+net/http.HandlerFunc.ServeHTTP(0x14000216a00?, {0x10aa5bdf8?, 0x1400020c600?}, 0xd0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi/middleware.RequestLogger.func1.1({0x102fabcf8, 0x140002320e0}, 0x14000216a00)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/middleware/logger.go:57 +0x2ec
+net/http.HandlerFunc.ServeHTTP(0x102fac178?, {0x102fabcf8?, 0x140002320e0?}, 0x10315f8b0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).ServeHTTP(0x14000110300, {0x102fabcf8, 0x140002320e0}, 0x14000216300)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:87 +0x2d8
+net/http.serverHandler.ServeHTTP({0x1400020a300?}, {0x102fabcf8, 0x140002320e0}, 0x14000216300)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2947 +0x2c4
+net/http.(*conn).serve(0x1400021c140, {0x102fac220, 0x1400007d800})
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1991 +0x560
+created by net/http.(*Server).Serve
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:3102 +0x444
+2023/12/08 14:44:59 eror on receiving value: Get "http://localhost:8000/hello": read tcp [::1]:57323->[::1]:8000: read: connection reset by peer
+2023/12/08 14:44:59 http: panic serving [::1]:57076: runtime error: invalid memory address or nil pointer dereference
+goroutine 7 [running]:
+net/http.(*conn).serve.func1()
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1850 +0xb0
+panic({0x102f59800, 0x10315fa60})
+	/Users/mamaz/.gvm/gos/go1.19/src/runtime/panic.go:890 +0x258
+main.main.func1({0x10aa5bdf8, 0x1400020c7c0}, 0x0?)
+	/Users/mamaz/Documents/coding-kata/Go/http-client-config/client/main.go:60 +0x120
+net/http.HandlerFunc.ServeHTTP(0x102f57a80?, {0x10aa5bdf8?, 0x1400020c7c0?}, 0x1400022807c?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).routeHTTP(0x14000110300, {0x10aa5bdf8, 0x1400020c7c0}, 0x14000217000)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:436 +0x218
+net/http.HandlerFunc.ServeHTTP(0x14000216f00?, {0x10aa5bdf8?, 0x1400020c7c0?}, 0xd0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi/middleware.RequestLogger.func1.1({0x102fabcf8, 0x140002321c0}, 0x14000216f00)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/middleware/logger.go:57 +0x2ec
+net/http.HandlerFunc.ServeHTTP(0x102fac178?, {0x102fabcf8?, 0x140002321c0?}, 0x10315f8b0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).ServeHTTP(0x14000110300, {0x102fabcf8, 0x140002321c0}, 0x14000160400)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:87 +0x2d8
+net/http.serverHandler.ServeHTTP({0x1400007db30?}, {0x102fabcf8, 0x140002321c0}, 0x14000160400)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2947 +0x2c4
+net/http.(*conn).serve(0x14000117ea0, {0x102fac220, 0x1400007d800})
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1991 +0x560
+created by net/http.(*Server).Serve
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:3102 +0x444
+2023/12/08 14:46:46 DEFAULT TRANSPORT: <nil>
+2023/12/08 14:46:46 listening to port 9000
+2023/12/08 14:51:13 DEFAULT TRANSPORT: <nil>
+2023/12/08 14:51:13 listening to port 9000
+2023/12/08 14:52:29 eror on receiving value: Get "http://localhost:8000/hello": dial tcp [::1]:8000: connect: resource temporarily unavailable
+2023/12/08 14:52:29 http: panic serving [::1]:58117: runtime error: invalid memory address or nil pointer dereference
+goroutine 725305 [running]:
+net/http.(*conn).serve.func1()
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1850 +0xb0
+panic({0x104b1d800, 0x104d23a60})
+	/Users/mamaz/.gvm/gos/go1.19/src/runtime/panic.go:890 +0x258
+main.main.func1({0x12c609240, 0x140009bf300}, 0x0?)
+	/Users/mamaz/Documents/coding-kata/Go/http-client-config/client/main.go:60 +0x120
+net/http.HandlerFunc.ServeHTTP(0x104b1ba80?, {0x12c609240?, 0x140009bf300?}, 0x140008b23ac?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).routeHTTP(0x14000126300, {0x12c609240, 0x140009bf300}, 0x140007be500)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:436 +0x218
+net/http.HandlerFunc.ServeHTTP(0x140007be400?, {0x12c609240?, 0x140009bf300?}, 0x10484b9d4?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi/middleware.RequestLogger.func1.1({0x104b6fcf8, 0x140001a5260}, 0x140007be400)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/middleware/logger.go:57 +0x2ec
+net/http.HandlerFunc.ServeHTTP(0x104b70178?, {0x104b6fcf8?, 0x140001a5260?}, 0x104d238b0?)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2109 +0x38
+github.com/go-chi/chi.(*Mux).ServeHTTP(0x14000126300, {0x104b6fcf8, 0x140001a5260}, 0x140007be300)
+	/Users/mamaz/.gvm/pkgsets/go1.19/global/pkg/mod/github.com/go-chi/chi@v1.5.5/mux.go:87 +0x2d8
+net/http.serverHandler.ServeHTTP({0x140009a1fb0?}, {0x104b6fcf8, 0x140001a5260}, 0x140007be300)
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:2947 +0x2c4
+net/http.(*conn).serve(0x140000dba40, {0x104b70220, 0x140001155f0})
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:1991 +0x560
+created by net/http.(*Server).Serve
+	/Users/mamaz/.gvm/gos/go1.19/src/net/http/server.go:3102 +0x444

@@ -2,18 +2,20 @@
 package calculator
 
 import (
-	"fmt"
 	"log"
 	"strconv"
 	"strings"
 )
 
-// 1 + 2 - 3
-// +-
-// 83
+// 1 + (2 + 4)
+// ++
+// 124
+// +1 +24
 
-// (1 + 2) - 2
-// 2 + (3 - 1)
+// 1 + 2 + 3
+//+ +12 3
+
+// Calculate reads string for numbers and operands and calculates them
 func Calculate(s string) int {
 	reversed := ReverseString(strings.ReplaceAll(s, " ", ""))
 	stackNumbers := NewIntStack()
@@ -45,14 +47,12 @@ func ProcessCalculation(numbers *Stack[int], signs *Stack[string]) int {
 			total := first + second
 
 			numbers.Push(total)
-			fmt.Println("plus", numbers.String())
 
 		case "-":
 			first, second := getOperands(numbers)
 			total := first - second
 
 			numbers.Push(total)
-			fmt.Println("sub", numbers.String())
 		}
 	}
 
