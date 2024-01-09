@@ -11,13 +11,15 @@ func main() {
 	urlChan := make(chan string)
 	iteration := 10
 
+	// asynchronously calls a function
 	for i := 0; i < iteration; i++ {
 		go u.GetRandomURLWithChannel(urlChan)
 	}
 
 	result := []string{}
 
-	// print one by one as soon as it's available
+	// getting the results
+	// channel is blocked, get the value and append the values to a slice
 	for i := 0; i < iteration; i++ {
 		result = append(result, <-urlChan)
 	}
